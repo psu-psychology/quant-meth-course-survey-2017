@@ -5,3 +5,7 @@ Results from a survey of Psychology Department graduate students about courses i
 ## Contents
 
 - `csv/`: Survey data.
+- [RMarkdown source](index.Rmd)
+- [HTML report](https://psu-psychology.github.io/quant-meth-course-survey-2017/)
+
+
