@@ -1,6 +1,5 @@
 ---
-title: "Student course survey results"
-subtitle: "2017"
+title: "2017 grad student course survey results"
 author: "Rick Gilmore"
 date: "`r Sys.time()`"
 output: html_document
@@ -39,16 +38,20 @@ quant_surv_df %>%
   dplyr::mutate(., Took_total = Took_psy + Took_oth) %>%
   dplyr::filter(., Took_total > 0) %>%
   dplyr::arrange(., desc(Took_total)) %>%
-  knitr::kable(., format = 'html')
+  knitr::kable(., format = "html", escape = FALSE) %>%
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>%
+  kableExtra::scroll_box(width="800px")
 ```
 
 ## Top courses desired
 
 ```{r}
 quant_surv_df %>%
-  dplyr::select(., Course, Offer_reg, Offer_summ) %>%
-  dplyr::mutate(., Offer_total = Offer_reg + Offer_summ) %>%
+  dplyr::select(., Course, Offer_reg, Offer_summ, Offer_no) %>%
+  dplyr::mutate(., Offer_total = Offer_reg + Offer_summ - Offer_no) %>%
   dplyr::filter(., Offer_total > 0) %>%
   dplyr::arrange(., desc(Offer_total)) %>%
-  knitr::kable(., format = 'html')
+  knitr::kable(., format = "html", escape = FALSE) %>%
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>%
+  kableExtra::scroll_box(width="800px")
 ```
