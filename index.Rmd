@@ -1,0 +1,54 @@
+---
+title: "Student course survey results"
+subtitle: "2017"
+author: "Rick Gilmore"
+date: "`r Sys.time()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+require(tidyverse)
+```
+
+# Purpose
+
+This document summarizes the results of a survey of Psychology Department graduate students conducted in 2017. It concerns the quantitative methods courses they have taken, and wish to have offered in the future.
+
+# Plan
+
+1. Import the data
+2. Clean it, as necessary
+2. Visualize the data
+
+# Import and clean
+
+```{r}
+quant_surv_df <- readr::read_csv("csv/quant_course_survey-2017-clean.csv")
+str(quant_surv_df)
+```
+
+# Visualize
+
+## Top courses taken
+
+```{r}
+quant_surv_df %>%
+  dplyr::select(., Course, Took_psy, Took_oth) %>%
+  dplyr::mutate(., Took_total = Took_psy + Took_oth) %>%
+  dplyr::filter(., Took_total > 0) %>%
+  dplyr::arrange(., desc(Took_total)) %>%
+  knitr::kable(., format = 'html')
+```
+
+## Top courses desired
+
+```{r}
+quant_surv_df %>%
+  dplyr::select(., Course, Offer_reg, Offer_summ) %>%
+  dplyr::mutate(., Offer_total = Offer_reg + Offer_summ) %>%
+  dplyr::filter(., Offer_total > 0) %>%
+  dplyr::arrange(., desc(Offer_total)) %>%
+  knitr::kable(., format = 'html')
+```

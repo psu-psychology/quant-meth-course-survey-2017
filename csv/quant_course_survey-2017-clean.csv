@@ -1,7 +1,7 @@
-﻿Course,Source,Took_psych,Took_other,Never_taken,Offer_regularly,Offer_summer,Don’t_offer
-Structual Eq Modeling,survey,2,27,24,49,3,1
-Multivariate statistics,survey,7,11,34,46,6,1
-Long Data Analysis,survey,1,10,41,37,15,1
+Course,Source,Took_psy,Took_oth,Took_nev,Offer_reg,Offer_summ,Offer_no
+Structural Eq Modeling,survey,2,27,24,49,3,1
+Multivariate stats,survey,7,11,34,46,6,1
+Longitud Data Analysis,survey,1,10,41,37,15,1
 Multi-Level Modeling,survey,17,7,29,47,5,0
 Psychometrics,survey,5,5,41,32,17,4
 Network Analysis,survey,1,4,46,25,25,3
@@ -13,7 +13,7 @@ fMRI Data Analysis,survey,8,2,42,24,20,7
 Foundations in Programming,survey,6,2,44,22,26,4
 Nonparametric stats,survey,2,1,49,17,27,7
 Data Visualization and Management,survey,10,0,42,25,27,1
-Research Reproducilbility,survey,3,0,47,12,30,9
+Research Reproducibility,survey,3,0,47,12,30,9
 Person Specific Data Analysis (HDFS class),respondents,0,3,0,1,1,1
 Bayeian Analysis,respondents,0,2,0,2,0,0
 R,respondents,0,1,1,2,0,0
