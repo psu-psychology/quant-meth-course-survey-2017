@@ -2,11 +2,15 @@
 title: "2017 grad student course survey results"
 author: "Rick Gilmore"
 date: "`r Sys.time()`"
-output: html_document
+output: 
+  html_document:
+    code_folding: hide
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      error = FALSE)
 
 require(tidyverse)
 ```
@@ -28,7 +32,7 @@ quant_surv_df <- readr::read_csv("csv/quant_course_survey-2017-clean.csv")
 str(quant_surv_df)
 ```
 
-# Visualize
+# Visualize {.tabset}
 
 ## Top courses taken
 
@@ -47,11 +51,14 @@ quant_surv_df %>%
 
 ```{r}
 quant_surv_df %>%
-  dplyr::select(., Course, Offer_reg, Offer_summ, Offer_no) %>%
   dplyr::mutate(., Offer_total = Offer_reg + Offer_summ - Offer_no) %>%
   dplyr::filter(., Offer_total > 0) %>%
   dplyr::arrange(., desc(Offer_total)) %>%
-  knitr::kable(., format = "html", escape = FALSE) %>%
-  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>%
-  kableExtra::scroll_box(width="800px")
+  dplyr::select(., Course, Offer_reg, Offer_summ, Offer_no, Offer_total, Status) %>%
+  dplyr::mutate(., Status = kableExtra::cell_spec(Status,
+      'html', color = ifelse(Status == "Not_offered", "red", ifelse(Status %in% c("2022"), "green", "orange")))) %>%
+        knitr::kable(., format = "html", escape = FALSE) %>%
+        kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>%
+        kableExtra::scroll_box(width = "800px"
+        )
 ```
