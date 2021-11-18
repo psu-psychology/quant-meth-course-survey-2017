@@ -1,23 +1,23 @@
 Course,Source,Took_psy,Took_oth,Took_nev,Offer_reg,Offer_summ,Offer_no,Status
-Structural Eq Modeling,survey,2,27,24,49,3,1,Periodically
+Structural Equation Modeling,survey,2,27,24,49,3,1,Periodically
 Multivariate stats,survey,7,11,34,46,6,1,Periodically
-Longitud Data Analysis,survey,1,10,41,37,15,1,HDFS
+Longitudinal Data Analysis,survey,1,10,41,37,15,1,HDFS
 Multi-Level Modeling,survey,17,7,29,47,5,0,Periodically
 Psychometrics,survey,5,5,41,32,17,4,2022
 Network Analysis,survey,1,4,46,25,25,3,SoDA
-Dynamic Systems Modeling,survey,0,3,48,21,20,11,Not_offered
+Dynamic Systems Modeling,survey,0,3,48,21,20,11,HDFS
 Missing Data Analysis,survey,0,3,47,9,38,6,HDFS
-Comp Modeling,survey,0,2,50,19,27,6,HDFS
+Computational Modeling,survey,0,2,50,19,27,6,HDFS
 Machine Learning,survey,2,2,47,7,26,16,IST
 fMRI Data Analysis,survey,8,2,42,24,20,7,2022
-Foundations in Programming,survey,6,2,44,22,26,4,Not_offered
+Foundations of Programming,survey,6,2,44,22,26,4,Not_offered
 Nonparametric stats,survey,2,1,49,17,27,7,Not_offered
 Data Visualization and Management,survey,10,0,42,25,27,1,Not_offered
 Research Reproducibility,survey,3,0,47,12,30,9,Periodically
-Person Specific Data Analysis (HDFS class),respondents,0,3,0,1,1,1,HDFS
+Person Specific Data Analysis,respondents,0,3,0,1,1,1,HDFS
 Bayesian Analysis,respondents,0,2,0,2,0,0,Not_offered
 R,respondents,0,1,1,2,0,0,Periodically
-Latent Class analysis,respondents,0,1,3,4,1,0,Sociology
+Latent Class Analysis,respondents,0,1,3,4,1,0,Sociology
 Item Response Theory,respondents,0,1,2,2,0,0,Not_offered
 Time Series Analysis,respondents,0,1,0,0,0,0,Not_offered
 Mixture Models,respondents,0,0,1,0,1,0,Not_offered

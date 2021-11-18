@@ -180,7 +180,7 @@ pre code {
 
 <h1 class="title toc-ignore">2017 grad student course survey results</h1>
 <h4 class="author">Rick Gilmore</h4>
-<h4 class="date">2021-11-18 07:58:35</h4>
+<h4 class="date">2021-11-18 12:19:56</h4>
 
 </div>
 
@@ -201,16 +201,16 @@ pre code {
 <h1>Import and clean</h1>
 <pre class="r"><code>quant_surv_df &lt;- readr::read_csv(&quot;csv/quant_course_survey-2017-clean.csv&quot;)</code></pre>
 <pre><code>## Rows: 23 Columns: 9</code></pre>
-<pre><code>## ── Column specification ────────────────────────────────────────────────────────
+<pre><code>## ── Column specification ─────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr (3): Course, Source, Status
-## dbl (6): Took_psy, Took_oth, Took_nev, Offer_reg, Offer_summ, Offer_no</code></pre>
+## dbl (6): Took_psy, Took_oth, Took_nev, Offer_reg, Offer_s...</code></pre>
 <pre><code>## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code>str(quant_surv_df)</code></pre>
 <pre><code>## spec_tbl_df [23 × 9] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
-##  $ Course    : chr [1:23] &quot;Structural Eq Modeling&quot; &quot;Multivariate stats&quot; &quot;Longitud Data Analysis&quot; &quot;Multi-Level Modeling&quot; ...
+##  $ Course    : chr [1:23] &quot;Structural Equation Modeling&quot; &quot;Multivariate stats&quot; &quot;Longitudinal Data Analysis&quot; &quot;Multi-Level Modeling&quot; ...
 ##  $ Source    : chr [1:23] &quot;survey&quot; &quot;survey&quot; &quot;survey&quot; &quot;survey&quot; ...
 ##  $ Took_psy  : num [1:23] 2 7 1 17 5 1 0 0 0 2 ...
 ##  $ Took_oth  : num [1:23] 27 11 10 7 5 4 3 3 2 2 ...
@@ -266,7 +266,7 @@ Took_total
 <tbody>
 <tr>
 <td style="text-align:left;">
-Structural Eq Modeling
+Structural Equation Modeling
 </td>
 <td style="text-align:right;">
 2
@@ -308,7 +308,7 @@ Multivariate stats
 </tr>
 <tr>
 <td style="text-align:left;">
-Longitud Data Analysis
+Longitudinal Data Analysis
 </td>
 <td style="text-align:right;">
 1
@@ -364,7 +364,7 @@ Data Visualization and Management
 </tr>
 <tr>
 <td style="text-align:left;">
-Foundations in Programming
+Foundations of Programming
 </td>
 <td style="text-align:right;">
 6
@@ -462,7 +462,7 @@ Research Reproducibility
 </tr>
 <tr>
 <td style="text-align:left;">
-Person Specific Data Analysis (HDFS class)
+Person Specific Data Analysis
 </td>
 <td style="text-align:right;">
 0
@@ -476,7 +476,7 @@ Person Specific Data Analysis (HDFS class)
 </tr>
 <tr>
 <td style="text-align:left;">
-Comp Modeling
+Computational Modeling
 </td>
 <td style="text-align:right;">
 0
@@ -518,7 +518,7 @@ R
 </tr>
 <tr>
 <td style="text-align:left;">
-Latent Class analysis
+Latent Class Analysis
 </td>
 <td style="text-align:right;">
 0
@@ -622,7 +622,7 @@ Multi-Level Modeling
 </tr>
 <tr>
 <td style="text-align:left;">
-Structural Eq Modeling
+Structural Equation Modeling
 </td>
 <td style="text-align:right;">
 49
@@ -662,7 +662,7 @@ Multivariate stats
 </tr>
 <tr>
 <td style="text-align:left;">
-Longitud Data Analysis
+Longitudinal Data Analysis
 </td>
 <td style="text-align:right;">
 37
@@ -742,7 +742,7 @@ Psychometrics
 </tr>
 <tr>
 <td style="text-align:left;">
-Foundations in Programming
+Foundations of Programming
 </td>
 <td style="text-align:right;">
 22
@@ -782,7 +782,7 @@ Missing Data Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-Comp Modeling
+Computational Modeling
 </td>
 <td style="text-align:right;">
 19
@@ -877,7 +877,7 @@ Dynamic Systems Modeling
 30
 </td>
 <td style="text-align:left;">
-<span style="     color: red !important;">Not_offered</span>
+<span style="     color: orange !important;">HDFS</span>
 </td>
 </tr>
 <tr>
@@ -902,7 +902,7 @@ Machine Learning
 </tr>
 <tr>
 <td style="text-align:left;">
-Latent Class analysis
+Latent Class Analysis
 </td>
 <td style="text-align:right;">
 4
@@ -982,7 +982,7 @@ Item Response Theory
 </tr>
 <tr>
 <td style="text-align:left;">
-Person Specific Data Analysis (HDFS class)
+Person Specific Data Analysis
 </td>
 <td style="text-align:right;">
 1
