@@ -49,16 +49,29 @@ quant_surv_df %>%
 
 ## Top courses desired
 
+The following table calculates a `Most_popular` variable equal to `Offer_reg + Offer_summ - Offer_no` then sorts on it.
+
 ```{r}
 quant_surv_df %>%
-  dplyr::mutate(., Offer_total = Offer_reg + Offer_summ - Offer_no) %>%
+  dplyr::mutate(., Most_popular = Offer_reg + Offer_summ - Offer_no) %>%
+  dplyr::mutate(., Offer_total = Offer_reg + Offer_summ) %>%
   dplyr::filter(., Offer_total > 0) %>%
   dplyr::arrange(., desc(Offer_total)) %>%
-  dplyr::select(., Course, Offer_reg, Offer_summ, Offer_no, Offer_total, Status) %>%
+  dplyr::select(.,
+                Course,
+                Offer_reg,
+                Offer_summ,
+                Offer_total,
+                Offer_no,
+                Most_popular,
+                Status) %>%
   dplyr::mutate(., Status = kableExtra::cell_spec(Status,
-      'html', color = ifelse(Status == "Not_offered", "red", ifelse(Status %in% c("2022"), "green", "orange")))) %>%
-        knitr::kable(., format = "html", escape = FALSE) %>%
-        kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>%
-        kableExtra::scroll_box(width = "800px"
-        )
+                                                  'html', color = ifelse(
+                                                    Status == "Not_offered",
+                                                    "red",
+                                                    ifelse(Status %in% c("2022"), "green", "orange")
+                                                  ))) %>%
+  knitr::kable(., format = "html", escape = FALSE) %>%
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>%
+  kableExtra::scroll_box(width = "800px")
 ```
